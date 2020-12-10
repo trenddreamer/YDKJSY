@@ -1,26 +1,24 @@
-function Publication(one,two,three)
-{
+function Publication(a,b,c){
     var API = {
-         print(){
-             console.log(`${one} , ${two} , ${three}`);
-            } 
-    };
-
-    return API;
-
-}
-
-function Book(one,two,three,four)
-{
-    var pub = Publication(one,two,three);
-    var API = {
-        print(){
-            pub.print();
-            console.log(four);
+        print (){
+        console.log(`${a} ${b} ${c}`);
         }
     }
     return API;
 }
 
-var book = Book("one","two","three","four");
-book.print();
+function Book(a,b,c,d,e)
+{
+    var pub = Publication(a,b,c);
+
+    var API = {
+        print(){
+            pub.print()
+            console.log(`${d}  ${e}`);
+        }
+    }
+    return API;
+}
+
+var myBook = Book('a', 'b', 'c','d','e');
+myBook.print();
